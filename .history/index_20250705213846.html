@@ -1118,7 +1118,7 @@
     </section>
 
     <!-- Registration Section -->
-    <!-- <section class="registration" id="registration">
+    <section class="registration" id="registration">
         <div class="container">
             <h2>Start Your AI Career Journey Today!</h2>
             <p>Join our six-month intensive program with hands-on projects and personalized mentorship. Limited seats available for the next batch.</p>
@@ -1157,15 +1157,15 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="experience">College Name</label>
-                        <input type="text" id="experience" name="College Name">
+                        <label for="experience">College NAME</label>
+                        <input type="text" id="experience" name="">
                     </div>
                     
                     <button type="submit" class="submit-btn">Apply Now</button>
                 </form>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -1193,11 +1193,11 @@
             </div>
             
             <div class="social-icons">
-                <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
-                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/company/107948700/admin/page-posts/published/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/ai_learning_institute?utm_source=qr&igsh=NGhwYjFqdnE3ejdy"><i class="fab fa-instagram"></i></a>
-                <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             
             <div class="copyright">
@@ -1206,77 +1206,44 @@
         </div>
     </footer>
 
-<!-- <script>
-    function openTab(evt, tabName) {
-        // Hide all tab content
-        var tabcontent = document.getElementsByClassName("tab-content");
-        for (var i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            var tabbuttons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
         
-        // Remove active class from all tab buttons
-        var tabbuttons = document.getElementsByClassName("tab-button");
-        for (var i = 0; i < tabbuttons.length; i++) {
-            tabbuttons[i].classList.remove("active");
-        }
-        
-        // Show the current tab and add active class to the button
-        document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.classList.add("active");
-    }
-    
-    document.getElementById('registrationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Form validation
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const collegeName = document.getElementById('experience').value; // Changed from 'experience' to 'collegeName'
-        
-        if(name && email && phone) {
-            // Create a hidden iframe to submit to Google Forms
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Create a form that will be submitted to Google Forms
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
-            form.target = '_blank'; // Open in new tab if needed
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             
-            // Add your form fields (replace with your actual Google Form field IDs)
-            const addField = (name, value) => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = name;
-                input.value = value;
-                form.appendChild(input);
-            };
-            
-            // Map your form fields to Google Form entry IDs
-            addField('entry.123456789', name);       // Replace with your name field ID
-            addField('entry.987654321', email);      // Replace with your email field ID
-            addField('entry.555555555', phone);      // Replace with your phone field ID
-            addField('entry.111111111', document.getElementById('education').value); // Education field
-            addField('entry.333333333', collegeName); // College Name field (replace with your actual ID)
-            
-            iframe.contentDocument.body.appendChild(form);
-            form.submit();
-            
-            // Show success message
-            alert('Registration submitted successfully!');
-            
-            // Reset form
-            this.reset();
-            
-            // Remove the iframe after submission
-            setTimeout(() => document.body.removeChild(iframe), 1000);
-        } else {
-            alert('Please fill in all required fields.');
-        }
-    });
-</script> -->
+            if(name && email && phone) {
+                // In a real implementation, this would submit to Google Forms
+                alert('Registration successful! We will contact you shortly with course details.');
+                this.reset();
+                
+                // Redirect or open Google Form
+                // window.open('YOUR_GOOGLE_FORM_LINK_HERE', '_blank');
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    </script>
 </body>
 </html>

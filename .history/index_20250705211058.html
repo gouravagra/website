@@ -21,10 +21,6 @@
             --dark: #0f172a;
             --success: #10b981;
             --warning: #f59e0b;
-            --dl-blue: #3b82f6;
-            --dl-purple: #8b5cf6;
-            --dl-green: #10b981;
-            --dl-red: #ef4444;
         }
         
         body {
@@ -314,110 +310,6 @@
             margin-left: -1em;
         }
         
-        /* Deep Learning Section */
-        .deep-learning {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .dl-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-        
-        .dl-card {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid;
-            transition: transform 0.3s;
-        }
-        
-        .dl-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .dl-card.ann {
-            border-top-color: var(--dl-blue);
-        }
-        
-        .dl-card.cnn {
-            border-top-color: var(--dl-purple);
-        }
-        
-        .dl-card.rnn {
-            border-top-color: var(--dl-green);
-        }
-        
-        .dl-card.gan {
-            border-top-color: var(--dl-red);
-        }
-        
-        .dl-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .dl-card h3 i {
-            font-size: 1.5rem;
-        }
-        
-        .dl-card.ann h3 i {
-            color: var(--dl-blue);
-        }
-        
-        .dl-card.cnn h3 i {
-            color: var(--dl-purple);
-        }
-        
-        .dl-card.rnn h3 i {
-            color: var(--dl-green);
-        }
-        
-        .dl-card.gan h3 i {
-            color: var(--dl-red);
-        }
-        
-        /* Backend & Databases Section */
-        .backend-db {
-            padding: 80px 0;
-            background: linear-gradient(to bottom, #dbeafe, #bfdbfe);
-        }
-        
-        .bd-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .bd-card {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
-        
-        .bd-card h3 {
-            font-size: 1.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .bd-card h3 i {
-            font-size: 1.8rem;
-            color: var(--primary);
-        }
-        
         /* Libraries Section */
         .libraries {
             padding: 80px 0;
@@ -625,10 +517,6 @@
                 flex-direction: column;
                 align-items: center;
             }
-            
-            .bd-container {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
@@ -638,7 +526,7 @@
         <div class="container header-content">
             <div class="logo">
                 <i class="fas fa-brain logo-icon"></i>
-                <h1>AI Learning Institute By Gourav</h1>
+                <h1>AI Learning Institute</h1>
             </div>
             <div class="contact-info">
                 <a href="mailto:goluagrawal1432@gmail.com"><i class="fas fa-envelope"></i> goluagrawal1432@gmail.com</a>
@@ -651,7 +539,7 @@
     <section class="hero">
         <div class="container hero-content">
             <h2>Python & Data Science Masterclass</h2>
-            <p>From Fundamentals to Advanced AI, Backend Development & Databases</p>
+            <p>From Fundamentals to Advanced AI</p>
             <div class="duration">DURATION: SIX MONTHS</div>
             <p class="highlight">COMPREHENSIVE CURRICULUM | REAL-WORLD PROJECTS | 1:1 MENTORSHIP</p>
             <a href="#registration" class="cta-button">ENROLL NOW</a>
@@ -679,10 +567,10 @@
                     <ul>
                         <li><i class="fas fa-check-circle"></i> Statistics & Probability</li>
                         <li><i class="fas fa-check-circle"></i> Data Cleaning & Preprocessing</li>
-                        <li><i class="fas fa-check-circle"></i> Machine Learning & Deep Learning</li>
-                        <li><i class="fas fa-check-circle"></i> ANN, CNN, RNN, GAN, Autoencoders</li>
-                        <li><i class="fas fa-check-circle"></i> Generative AI & LLM Fine-tuning</li>
-                        <li><i class="fas fa-check-circle"></i> RAG Implementation & Agent AI</li>
+                        <li><i class="fas fa-check-circle"></i> Exploratory Data Analysis (EDA)</li>
+                        <li><i class="fas fa-check-circle"></i> Machine Learning (Supervised & Unsupervised)</li>
+                        <li><i class="fas fa-check-circle"></i> Deep Learning & Neural Networks</li>
+                        <li><i class="fas fa-check-circle"></i> Generative AI & Large Language Models</li>
                     </ul>
                 </div>
             </div>
@@ -697,7 +585,6 @@
             <div class="tabs">
                 <button class="tab-button active" onclick="openTab(event, 'python')">Python Programming</button>
                 <button class="tab-button" onclick="openTab(event, 'data-science')">Data Science</button>
-                <button class="tab-button" onclick="openTab(event, 'backend-db')">Backend & Databases</button>
             </div>
             
             <div id="python" class="tab-content active">
@@ -773,6 +660,36 @@
                     </div>
                 </div>
                 
+                <div class="module">
+                    <h3 class="module-title">PART 4: OBJECT-ORIENTED PROGRAMMING (OOP)</h3>
+                    <div class="slide">
+                        <h4>1. Classes and Objects</h4>
+                        <ul>
+                            <li>Classes as Blueprints</li>
+                            <li>Objects (Instances)</li>
+                            <li>Instance Variables and Methods</li>
+                            <li>Constructors (__init__) and Destructors</li>
+                        </ul>
+                    </div>
+                    <div class="slide">
+                        <h4>2. Inheritance and Polymorphism</h4>
+                        <ul>
+                            <li>Extending Classes (Inheritance)</li>
+                            <li>Method Overriding</li>
+                            <li>Polymorphism</li>
+                            <li>Method Resolution Order (MRO)</li>
+                        </ul>
+                    </div>
+                    <div class="slide">
+                        <h4>3. Advanced OOP Concepts</h4>
+                        <ul>
+                            <li>Abstract Classes and Interfaces</li>
+                            <li>Multiple Inheritance</li>
+                            <li>Magic Methods (Dunder Methods)</li>
+                        </ul>
+                    </div>
+                </div>
+                
                 <!-- More modules would continue here... -->
             </div>
             
@@ -839,7 +756,8 @@
                         </ul>
                     </div>
                 </div>
-                   <div class="module">
+                
+                <div class="module">
                     <h3 class="module-title">PART 4: MACHINE LEARNING</h3>
                     <div class="slide">
                         <h4>1. Supervised Learning</h4>
@@ -860,210 +778,13 @@
                 
                 <!-- More modules would continue here... -->
             </div>
-            
-            <div id="backend-db" class="tab-content">
-                <!-- Backend Development -->
-                <div class="module">
-                    <h3 class="module-title">BACKEND DEVELOPMENT WITH FASTAPI</h3>
-                    <div class="slide">
-                        <h4>FastAPI Fundamentals</h4>
-                        <ul>
-                            <li>Introduction to FastAPI and its advantages</li>
-                            <li>Setting up FastAPI environment</li>
-                            <li>Creating your first API endpoint</li>
-                            <li>Path parameters and query parameters</li>
-                        </ul>
-                    </div>
-                    <div class="slide">
-                        <h4>Advanced FastAPI Features</h4>
-                        <ul>
-                            <li>Request body and Pydantic models</li>
-                            <li>Response models and status codes</li>
-                            <li>Dependency injection system</li>
-                            <li>Middleware and CORS</li>
-                        </ul>
-                    </div>
-                    <div class="slide">
-                        <h4>Authentication & Deployment</h4>
-                        <ul>
-                            <li>JWT authentication</li>
-                            <li>OAuth2 with Password (and hashing)</li>
-                            <li>Deploying FastAPI applications</li>
-                            <li>Dockerizing FastAPI apps</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Databases -->
-                <div class="module">
-                    <h3 class="module-title">DATABASES</h3>
-                    <div class="slide">
-                        <h4>PostgreSQL</h4>
-                        <ul>
-                            <li>Relational database concepts</li>
-                            <li>PostgreSQL installation and setup</li>
-                            <li>SQL queries (SELECT, INSERT, UPDATE, DELETE)</li>
-                            <li>Joins, indexes, and transactions</li>
-                        </ul>
-                    </div>
-                    <div class="slide">
-                        <h4>MongoDB</h4>
-                        <ul>
-                            <li>NoSQL database concepts</li>
-                            <li>MongoDB installation and setup</li>
-                            <li>CRUD operations</li>
-                            <li>Aggregation framework</li>
-                        </ul>
-                    </div>
-                    <div class="slide">
-                        <h4>Database Integration</h4>
-                        <ul>
-                            <li>Connecting Python to PostgreSQL</li>
-                            <li>Connecting Python to MongoDB</li>
-                            <li>ORM (SQLAlchemy for PostgreSQL)</li>
-                            <li>ODM (MongoEngine for MongoDB)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deep Learning Section -->
-    <section class="deep-learning">
-        <div class="container">
-            <h2 class="section-title">Deep Learning & Generative AI</h2>
-            <div class="dl-grid">
-                <div class="dl-card ann">
-                    <h3><i class="fas fa-network-wired"></i> Artificial Neural Networks (ANN)</h3>
-                    <ul>
-                        <li>Inspired by the human brain</li>
-                        <li>Backpropagation algorithm</li>
-                        <li>Activation functions (ReLU, Sigmoid, Tanh)</li>
-                        <li>Building and training neural networks</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card cnn">
-                    <h3><i class="fas fa-eye"></i> Convolutional Neural Networks (CNN)</h3>
-                    <ul>
-                        <li>Specialized for image processing</li>
-                        <li>Convolutional and pooling layers</li>
-                        <li>Object detection (YOLO, Faster R-CNN)</li>
-                        <li>Transfer learning with pre-trained models</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card rnn">
-                    <h3><i class="fas fa-project-diagram"></i> Recurrent Neural Networks (RNN)</h3>
-                    <ul>
-                        <li>Designed for sequential data</li>
-                        <li>LSTM and GRU architectures</li>
-                        <li>Time series forecasting</li>
-                        <li>Natural language processing</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card gan">
-                    <h3><i class="fas fa-magic"></i> Generative Adversarial Networks (GAN)</h3>
-                    <ul>
-                        <li>Generator and discriminator networks</li>
-                        <li>Training GANs effectively</li>
-                        <li>Applications in image generation</li>
-                        <li>Style transfer and image-to-image translation</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card">
-                    <h3><i class="fas fa-robot"></i> Autoencoders</h3>
-                    <ul>
-                        <li>Encoder-decoder architecture</li>
-                        <li>Dimensionality reduction</li>
-                        <li>Anomaly detection</li>
-                        <li>Denoising autoencoders</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card">
-                    <h3><i class="fas fa-language"></i> Large Language Models (LLM)</h3>
-                    <ul>
-                        <li>Transformer architecture</li>
-                        <li>Fine-tuning pre-trained models</li>
-                        <li>Prompt engineering techniques</li>
-                        <li>Evaluation metrics for LLMs</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card">
-                    <h3><i class="fas fa-search"></i> RAG Implementation</h3>
-                    <ul>
-                        <li>Retrieval-Augmented Generation</li>
-                        <li>Combining LLMs with knowledge bases</li>
-                        <li>Vector databases for retrieval</li>
-                        <li>Implementing RAG pipelines</li>
-                    </ul>
-                </div>
-                
-                <div class="dl-card">
-                    <h3><i class="fas fa-user-robot"></i> Agent AI & Chatbots</h3>
-                    <ul>
-                        <li>Building conversational agents</li>
-                        <li>Dialog management systems</li>
-                        <li>Integration with messaging platforms</li>
-                        <li>Evaluation of chatbot performance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Backend & Databases Section -->
-    <section class="backend-db">
-        <div class="container">
-            <h2 class="section-title">Backend Development & Databases</h2>
-            <div class="bd-container">
-                <div class="bd-card">
-                    <h3><i class="fas fa-server"></i> FastAPI Backend Development</h3>
-                    <ul>
-                        <li>Modern, fast web framework for APIs</li>
-                        <li>Automatic interactive API documentation</li>
-                        <li>Type hints and data validation</li>
-                        <li>Async support for high performance</li>
-                        <li>Authentication and authorization</li>
-                        <li>Testing and deployment strategies</li>
-                    </ul>
-                </div>
-                
-                <div class="bd-card">
-                    <h3><i class="fas fa-database"></i> Databases</h3>
-                    <div class="slide">
-                        <h4>PostgreSQL</h4>
-                        <ul>
-                            <li>Advanced relational database features</li>
-                            <li>Stored procedures and functions</li>
-                            <li>Performance optimization</li>
-                            <li>Integration with FastAPI</li>
-                        </ul>
-                    </div>
-                    <div class="slide">
-                        <h4>MongoDB</h4>
-                        <ul>
-                            <li>Document-oriented database</li>
-                            <li>Schema design best practices</li>
-                            <li>Sharding and replication</li>
-                            <li>Integration with FastAPI</li>
-                        </ul>
-                    </div>
-                    
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Libraries Section -->
     <section class="libraries">
         <div class="container">
-            <h2 class="section-title">Key Libraries & Frameworks Covered</h2>
+            <h2 class="section-title">Key Libraries Covered</h2>
             <div class="library-grid">
                 <div class="library-card">
                     <h3><i class="fab fa-python"></i> Pandas</h3>
@@ -1097,28 +818,12 @@
                     <h3><i class="fas fa-eye"></i> OpenCV</h3>
                     <p>Computer vision and image processing</p>
                 </div>
-                <div class="library-card">
-                    <h3><i class="fas fa-server"></i> FastAPI</h3>
-                    <p>Modern, fast web framework for APIs</p>
-                </div>
-                <div class="library-card">
-                    <h3><i class="fas fa-database"></i> SQLAlchemy</h3>
-                    <p>Python SQL toolkit and ORM</p>
-                </div>
-                <div class="library-card">
-                    <h3><i class="fas fa-database"></i> MongoEngine</h3>
-                    <p>ODM for MongoDB in Python</p>
-                </div>
-                <div class="library-card">
-                    <h3><i class="fas fa-language"></i> Transformers</h3>
-                    <p>State-of-the-art NLP models</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Registration Section -->
-    <!-- <section class="registration" id="registration">
+    <section class="registration" id="registration">
         <div class="container">
             <h2>Start Your AI Career Journey Today!</h2>
             <p>Join our six-month intensive program with hands-on projects and personalized mentorship. Limited seats available for the next batch.</p>
@@ -1157,15 +862,15 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="experience">College Name</label>
-                        <input type="text" id="experience" name="College Name">
+                        <label for="experience">Work Experience (if any)</label>
+                        <input type="text" id="experience" name="experience">
                     </div>
                     
                     <button type="submit" class="submit-btn">Apply Now</button>
                 </form>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -1193,11 +898,11 @@
             </div>
             
             <div class="social-icons">
-                <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
-                <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-                <a href="https://www.linkedin.com/company/107948700/admin/page-posts/published/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/ai_learning_institute?utm_source=qr&igsh=NGhwYjFqdnE3ejdy"><i class="fab fa-instagram"></i></a>
-                <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
             
             <div class="copyright">
@@ -1206,77 +911,44 @@
         </div>
     </footer>
 
-<!-- <script>
-    function openTab(evt, tabName) {
-        // Hide all tab content
-        var tabcontent = document.getElementsByClassName("tab-content");
-        for (var i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.remove("active");
+    <script>
+        function openTab(evt, tabName) {
+            // Hide all tab content
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remove active class from all tab buttons
+            var tabbuttons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Show the current tab and add active class to the button
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
         }
         
-        // Remove active class from all tab buttons
-        var tabbuttons = document.getElementsByClassName("tab-button");
-        for (var i = 0; i < tabbuttons.length; i++) {
-            tabbuttons[i].classList.remove("active");
-        }
-        
-        // Show the current tab and add active class to the button
-        document.getElementById(tabName).classList.add("active");
-        evt.currentTarget.classList.add("active");
-    }
-    
-    document.getElementById('registrationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Form validation
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const collegeName = document.getElementById('experience').value; // Changed from 'experience' to 'collegeName'
-        
-        if(name && email && phone) {
-            // Create a hidden iframe to submit to Google Forms
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            // Create a form that will be submitted to Google Forms
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
-            form.target = '_blank'; // Open in new tab if needed
+            // Form validation
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
             
-            // Add your form fields (replace with your actual Google Form field IDs)
-            const addField = (name, value) => {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = name;
-                input.value = value;
-                form.appendChild(input);
-            };
-            
-            // Map your form fields to Google Form entry IDs
-            addField('entry.123456789', name);       // Replace with your name field ID
-            addField('entry.987654321', email);      // Replace with your email field ID
-            addField('entry.555555555', phone);      // Replace with your phone field ID
-            addField('entry.111111111', document.getElementById('education').value); // Education field
-            addField('entry.333333333', collegeName); // College Name field (replace with your actual ID)
-            
-            iframe.contentDocument.body.appendChild(form);
-            form.submit();
-            
-            // Show success message
-            alert('Registration submitted successfully!');
-            
-            // Reset form
-            this.reset();
-            
-            // Remove the iframe after submission
-            setTimeout(() => document.body.removeChild(iframe), 1000);
-        } else {
-            alert('Please fill in all required fields.');
-        }
-    });
-</script> -->
+            if(name && email && phone) {
+                // In a real implementation, this would submit to Google Forms
+                alert('Registration successful! We will contact you shortly with course details.');
+                this.reset();
+                
+                // Redirect or open Google Form
+                // window.open('YOUR_GOOGLE_FORM_LINK_HERE', '_blank');
+            } else {
+                alert('Please fill in all required fields.');
+            }
+        });
+    </script>
 </body>
 </html>
