@@ -1193,45 +1193,35 @@
         </div>
     </footer>
 
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
 
-  <script>
-    // Tab function
-    function openTab(evt, tabName) {
-      const tabContents = document.getElementsByClassName("tab-content");
-      for (let i = 0; i < tabContents.length; i++) {
-        tabContents[i].classList.remove("active");
-      }
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxSkUq6aKGAJqExOd1FMSOYK8spMKUrLoW_UEt7NbaYw1Zj6yEMwDHFtJ4EyDXW5DVKfw/exec';
 
-      const tabButtons = document.getElementsByClassName("tab-button");
-      for (let i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
-      }
+        const name = document.getElementById('name').value;
+        const college = document.getElementById('college').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
 
-      document.getElementById(tabName).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-
-    // Google Apps Script URL (replace with your actual URL)
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyG6OSEB95HBBEkzZONBWq8wPiSandjMRu6Xmq8oTx675PEXp0_IEG8bKpresZbxHlRMw/exec';
-
-    document.getElementById('registrationForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      fetch(scriptURL, {
-        method: 'POST',
-        body: new FormData(this),
-        mode: 'no-cors'
-      })
-      .then(() => {
-        alert("✅ Registration submitted successfully!");
-        this.reset();
-      })
-      .catch((error) => {
-        console.error("❌ Error!", error.message);
-        alert("❌ Something went wrong!");
-      });
+        if (name && college && email && phone) {
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(document.getElementById('registrationForm'))
+            })
+            .then(response => {
+                alert("✅ Registration submitted successfully!");
+                document.getElementById('registrationForm').reset();
+            })
+            .catch(error => {
+                console.error('❌ Error!', error.message);
+                alert("Something went wrong!");
+            });
+        } else {
+            alert('❗ Please fill in all required fields.');
+        }
     });
-  </script>
+</script>
 
 </body>
 </html>
